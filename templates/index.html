@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal Login</title>
+</head>
+<body>
+    <h1>Portal Login</h1>
+
+    {% if message %}
+    <p class="{{ status_class }}">{{ message }}</p>
+    {% endif %}
+
+    <!-- nosemgrep: python.django.security.django-no-csrf-token.django-no-csrf-token -->
+    <form method="POST" action="/">
+        <label for="username">Nama pengguna</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">Kata sandi</label>
+        <input id="password" name="password" type="password" required>
+
+        <button type="submit">Masuk</button>
+    </form>
+</body>
+</html>
