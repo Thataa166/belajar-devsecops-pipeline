@@ -22,7 +22,7 @@ jobs:
         run: semgrep scan --config auto --error --verbose --exclude=".github"
 
   pylint-check:
-    name: Python Code Quality
+    name: Python Code Quality Gate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
