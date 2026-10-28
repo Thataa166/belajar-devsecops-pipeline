@@ -7,5 +7,5 @@ def test_homepage_returns_200():
 
     response = client.get("/")
 
-    assert response.status_code == 404
+    assert response.status_code == 200
     assert b"Portal Login" in response.data
